@@ -1,0 +1,141 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Hide overflow */
+    background: #FFB1A4; /* Pink background */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styles */
+.headerBar {
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Header height */
+    background-color: transparent; /* Set to transparent */
+    display: flex;
+    align-items: center; 
+    z-index: 1000;
+    padding-left: 10px; /* Align header text */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    color: white; /* Default color */
+    font-size: 1.5em; /* Header font size */
+    text-transform: uppercase; /* Capitalize letters */
+    margin: 0 20px; /* Space between items */
+}
+
+nav a {
+    color: white; /* Default link color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover,
+nav a.active {
+    color: #023F92; /* Active link color */
+}
+
+/* Main Section Styles */
+.main-section {
+    display: flex;
+    flex-direction: column; /* Stack h1 elements */
+    align-items: flex-start; /* Align to the left */
+    justify-content: space-between; /* Evenly space h1 elements */
+    height: calc(100vh - 140px); /* Make the section height responsive, considering header and footer */
+    padding: 0 20px; /* Align h1 to the left with padding */
+    overflow: hidden; /* Prevent overflow */
+    margin-top: 100px; /* Push the main section down to avoid overlap with header */
+    padding-left: 23px; /* Align h1 to the left with padding */
+}
+
+/* H1 Styles */
+h1 {
+    color: white;
+    font-size: 20vmin; /* Responsive font size */
+    line-height: 0.9; /* Adjusted line height for spacing */
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0; /* Remove default margins */
+    padding-left: 0; /* Reset padding */
+}
+
+/* Blob Animation */
+.blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: #023F92;
+    width: 50vmax;
+    z-index: -1;
+    animation: move 20s ease-in-out infinite;
+    transform-origin: 50% 50%;
+}
+
+/* Keyframes for Blob Animation */
+@keyframes move {
+    0%   { transform: scale(1)   translate(10px, -30px); }
+    38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+    40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+    78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+    80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+    100% { transform: scale(1)   translate(10px, -30px); }
+}
+
+/* Footer Styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Set to transparent */
+    text-align: left; /* Align text to the left */
+    padding: 10px 10px; /* Smaller padding for the footer */
+    color: white; /* White footer text */
+    z-index: 1000;
+}
+
+.footer-links {
+    display: flex; /* Flex to align links in a row */
+    justify-content: flex-start; /* Align to the left */
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Ensure no margin */
+}
+
+.footer-links li {
+    margin: 0 20px; /* Space between footer links */
+}
+
+.footer-links a {
+    color: white; /* Default link color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-links a:hover {
+    color: #023F92; /* Active link color */
+}
+
+/* Copyright Text */
+.footer p {
+    margin: 0; /* Remove default margins */
+    font-size: 0.9em; /* Smaller copyright text */
+}
