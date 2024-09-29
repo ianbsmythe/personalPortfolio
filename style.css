@@ -1,6 +1,12 @@
 /* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Poppins:700');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: 'Poppins', sans-serif; /* Default font */
+}
 /* Base Styles */
 .bodyIndex {
     margin: 0;
@@ -28,7 +34,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* Header height */
+    height: 5em; /* Header height */
     background-color: transparent; /* Set to transparent */
     display: flex;
     align-items: center; 
@@ -75,6 +81,16 @@ nav a.active {
     overflow: hidden; /* Prevent overflow */    
 }
 
+.mainSectionBio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 80px;
+    height: calc(100vh-140px);
+    padding: 0 20px 0 23px;
+    overflow: scroll;
+}
 /* H1 Styles */
 h1 {
     color: white;
